@@ -1,9 +1,6 @@
 import os
 import shutil
 from datetime import datetime
-import threading
-import customtkinter as ctk
-from tkinter import filedialog as fd, messagebox as mb
 
 import openpyxl
 import pandas as pd
