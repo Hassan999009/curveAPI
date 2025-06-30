@@ -1,6 +1,7 @@
 fastapi
 uvicorn
-openpyxl
+python-multipart
 pandas
+openpyxl
 matplotlib
 xlsxwriter
