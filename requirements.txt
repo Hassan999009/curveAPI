@@ -1,1 +1,9 @@
-fastapi==0.95.2uvicorn[standard]==0.23.1pandas==2.0.3msoffcrypto-tool==0.65.0PyMuPDF==1.23.1Pillow==10.0.0openpyxl==3.1.2msoffcrypto==0.65.0pypiwin32==305  # si tu utilises win32com
+fastapi==0.95.2
+uvicorn[standard]==0.23.1
+pandas==2.0.3
+msoffcrypto-tool==5.4.2
+PyMuPDF==1.23.1
+Pillow==10.0.0
+openpyxl==3.1.2
+msoffcrypto==0.65.0
+pypiwin32==305  # si tu utilises win32com
