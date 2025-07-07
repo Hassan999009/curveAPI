@@ -73,17 +73,12 @@ def save_historique(df: pd.DataFrame, path: str):
     with pd.ExcelWriter(tmp, engine="openpyxl") as wr:
         df.to_excel(wr, sheet_name=HISTORIQUE_SHEET, index=False)
 
-    try:
-        import win32com.client as win32                     # type: ignore
-        xl = win32.DispatchEx("Excel.Application")
-        xl.Visible = False
-        wb = xl.Workbooks.Open(tmp)
-        wb.Password = HISTORIQUE_PASSWORD
-        wb.SaveAs(path, Password=HISTORIQUE_PASSWORD)
-        wb.Close()
-        xl.Quit()
-    except Exception:
-        os.replace(tmp, path)
+    # Version simplifiée pour Linux (Render) sans win32com
+    os.replace(tmp, path)
+
+    # Nettoyage si besoin
+    if os.path.exists(tmp):
+        os.remove(tmp)
 
 # -------------------------------------------------------------------------------
 # EXTRACTION PDF
