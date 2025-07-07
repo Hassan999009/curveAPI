@@ -84,9 +84,6 @@ def save_historique(df: pd.DataFrame, path: str):
         xl.Quit()
     except Exception:
         os.replace(tmp, path)
-    finally:
-        if os.path.exists(tmp):
-            os.remove(tmp)
 
 # -------------------------------------------------------------------------------
 # EXTRACTION PDF
